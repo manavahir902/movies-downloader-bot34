@@ -32,7 +32,7 @@ def get_movie(query):
         links = movie_page_link.find_all("a", {'rel': 'noopener', 'data-wpel-link': 'internal'})
         final_links = {}
         for i in links:
-            url = f"https://onepagelink.in/api?api={api_key}&url={i['href']}"
+            url = f"https://onepagelink.in/api?api=9531cdcaac74acb51dfacf38be563a9c16b1278e&url={i['href']}"
             response = requests.get(url)
             link = response.json()
             final_links[f"{i.text}"] = link['shortenedUrl']
